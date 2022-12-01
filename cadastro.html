@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<body> 
+
+<div class="container">
+	<h1 style="text-align: center">Enigma da Esfinge</h1>
+
+	<label class="tag">*Codigo/Nome</label>
+	<input id="resposta" placeholder="escreva aqui" style=" margin-top: 1rem"></input>
+	
+	<label class="tag">*Enigma</label>
+	<input id="resposta" placeholder="escreva aqui" style=" margin-top: 1rem"></input>
+
+	<label class="tag">*Texto que sera exibido para quem vencer</label>
+	<input id="resposta" placeholder="escreva aqui" style=" margin-top: 1rem"></input>
+	
+	<label class="tag">Link para redirecionamento para um prêmio</label>
+	<input id="resposta" placeholder="escreva aqui" style=" margin-top: 1rem"></input>
+
+	<button id="enviar"style="margin-top: 1rem"><strong>Enviar</strong></button>
+</div>
+
+</body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
+
+h1 {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 56px; 
+	
+	margin: 0 0 1rem 0;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1rem;
+	color: white;
+	border-style: none;	
+	padding: 6px;
+	
+
+	width: 84px;
+	height: 36px;
+
+	background-color: #6200EE;
+	border-radius: 4px;
+	
+	cursor: pointer;
+	transition-duration: 0.4s
+}
+
+button:hover {
+  background-color: #3B038A;
+}
+
+input {
+	padding: 1rem;
+}
+
+.tag {
+	font-family: 'Roboto'; 
+	font-style: normal; 
+	font-weight: 300; 
+	font-size: 32px; 
+	margin-top: 1rem
+}
+
+.container {
+	display: flex; 
+	flex-direction: column; 
+	
+	width: 70%;
+}
+
+</style>
+
+<script>
+
+var input = document.getElementById('resposta');
+
+document.getElementById('enviar').addEventListener("click", function() {
+	var myWindow = window.open("index.html", "_self");
+})
+
+</script>
+</html>

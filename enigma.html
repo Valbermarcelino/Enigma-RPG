@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<body> 
+
+<div class="container">
+	<h1 style="text-align: center">Enigma da Esfinge</h1>
+
+	<div class="content">
+		<p class="enigma"
+		>Não quero ser usado por 
+		quem me faz. </br>
+
+		Por quem me vê, também não.</br>
+
+		E quem me usa, não escolheu fazê-lo.</br>
+
+		O que eu sou?</p>
+	</div>
+
+
+	<label style="font-family: 'Roboto'; font-style: normal; font-weight: 300; font-size: 32px; margin-top: 1rem">Resposta</label>
+
+	<input id="resposta" placeholder="escreva aqui" style=" margin-top: 1rem"></input>
+
+	<button id="enviar"style="margin-top: 1rem"><strong>Enviar</strong></button>
+</div>
+
+</body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
+
+h1 {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 56px; 
+	
+	margin: 0 0 1rem 0;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	font-size: 1rem;
+	color: white;
+	border-style: none;	
+	padding: 6px;
+	
+
+	width: 84px;
+	height: 36px;
+
+	background-color: #6200EE;
+	border-radius: 4px;
+	
+	cursor: pointer;
+	transition-duration: 0.4s
+}
+
+button:hover {
+  background-color: #3B038A;
+}
+
+input {
+	padding: 1rem;
+}
+
+.enigma {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	line-height: 60px;
+}
+
+.container {
+	display: flex; 
+	flex-direction: column; 
+	
+	width: 70%;
+}
+
+.content {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 34px;
+	line-height: 36px;
+	color: rgba(0, 0, 0, 0.87);
+	
+	background: #D9D9D9; 
+	padding: 0.5rem
+}
+
+</style>
+
+<script>
+
+var input = document.getElementById('resposta');
+
+var contador = 3;
+
+document.getElementById('enviar').addEventListener("click", function() {
+  if (input.value == "caixão") {
+	var myWindow = window.open("vitoria.html", "_self");
+	/*myWindow.document.write("<p>I replaced the current window.</p>");
+	window.open("https://www.w3schools.com");*/
+    /*alert("sua resposta está correta!");*/
+  } else {
+    alert(`sua resposta incorreta voce tem mais ${contador-1} tentativas ate ser devorado pela esfinge`);
+	contador -= 1;
+    input.value = "";
+	
+	if(contador == 0){
+		window.open("derrota.html", "_self");
+	}
+  }
+})
+
+</script>
+</html>
